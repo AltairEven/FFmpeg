@@ -1852,7 +1852,7 @@ typedef struct AVFormatContext {
      */
     enum AVCodecID data_codec_id;
 
-#if FF_API_OLD_OPEN_CALLBACKS
+//#if FF_API_OLD_OPEN_CALLBACKS
     /**
      * Called to open further IO contexts when needed for demuxing.
      *
@@ -1870,9 +1870,9 @@ typedef struct AVFormatContext {
      *
      * @deprecated Use io_open and io_close.
      */
-    attribute_deprecated
+//    attribute_deprecated
     int (*open_cb)(struct AVFormatContext *s, AVIOContext **p, const char *url, int flags, const AVIOInterruptCB *int_cb, AVDictionary **options);
-#endif
+//#endif
 
     /**
      * ',' separated list of allowed protocols.
